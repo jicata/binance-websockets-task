@@ -5,4 +5,4 @@ echo "2/3 BUILD..."
 docker build -f DockerfileConsoleApp . -t binancewebsockettask_console_app_image
 
 echo "3/3 RUN..."
-docker run -it --name binancewebsockettask_console_app binancewebsockettask_console_app_image /bin/bash
+docker run --name binancewebsockettask_console_app binancewebsockettask_console_app_image
