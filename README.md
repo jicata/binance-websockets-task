@@ -4,7 +4,7 @@
 
 1. Run docker container (Recommended)
 
-Clone ther repository, navigate to the root folder and execute the following bash command **sh run_web_api.sh**. Once the command finishes executing, the Web Api will be available at http://localhost:5000. If port 5000 is taken by another application, consider stopp your other application or changing the exposed docker port in the run_web_api.sh file at line 8  "...-p 5000:80".
+Clone ther repository, navigate to the root folder and execute the following bash command **sh run_web_api.sh**. Once the command finishes executing, the Web Api will be available at http://localhost:5000. If port 5000 is taken by another application, consider stopping your other application or changing the exposed docker port in the run_web_api.sh file at line 8  "...-p 5000:80...".
 
 2. Run the WebApi project from IDE
 
