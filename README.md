@@ -14,7 +14,7 @@ Using your IDE of choice open the BinanceWebSocketTask.sln file.
 
 - In Rider, either choose the BinanceWebSocketTask.WebApi:IIS express or BinanceWebSocketTask run configuration and run the application
 
-Once the application has started, depending on the executing profile, it will be availableat at one of the following addresses: http://localhost:5002, https://localhost:5003, http://localhost:63279, http://localhost:44349
+Once the application has started, depending on the executing profile, it will be available at at one of the following addresses: http://localhost:5002, https://localhost:5003, http://localhost:63279, http://localhost:44349
 
 ## Console App
 
