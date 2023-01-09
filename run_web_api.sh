@@ -5,4 +5,4 @@ echo "2/3 BUILD..."
 docker build -f DockerfileWebApi . -t binancewebsockettask_webapi_image
 
 echo "3/3 RUN..."
-docker run -d --name binancewebsockettask_webapi binancewebsockettask_webapi_image
+docker run -d --name binancewebsockettask_webapi -p 5000:80 binancewebsockettask_webapi_image
