@@ -1,0 +1,14 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0 as build
+WORKDIR /app
+COPY . .
+WORKDIR /app/BinanceWebSocketTask.ConsoleApp
+RUN dotnet restore
+WORKDIR /app
+RUN dotnet publish -o /app/published-app
+
+FROM mcr.microsoft.com/dotnet/runtime:6.0 as runtime
+WORKDIR /app
+COPY --from=build /app/published-app /app
+COPY --from=build /app/BinanceWebSocketTask.WebApi/BinanceWebSocketsTask.db /app
+
+ENTRYPOINT [ "dotnet", "/app/BinanceWebSocketTask.ConsoleApp.dll" ]

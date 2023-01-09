@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>BinanceWebSocketTask.WebApi</AssemblyName>
+        <RootNamespace>BinanceWebSocketTask.WebApi</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="BinanceWebSocketTask.Business\**" />
+      <Compile Remove="BinanceWebSocketTask.Data\**" />
+      <Compile Remove="Business\**" />
+      <Compile Remove="BinanceWebSocketTask.ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="BinanceWebSocketTask.Business\**" />
+      <EmbeddedResource Remove="BinanceWebSocketTask.Data\**" />
+      <EmbeddedResource Remove="Business\**" />
+      <EmbeddedResource Remove="BinanceWebSocketTask.ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="BinanceWebSocketTask.Business\**" />
+      <None Remove="BinanceWebSocketTask.Data\**" />
+      <None Remove="Business\**" />
+      <None Remove="BinanceWebSocketTask.ConsoleApp\**" />
+      <None Update="Properties\launchSettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="BinanceWebSocketTask.Business\**" />
+      <Content Remove="BinanceWebSocketTask.Data\**" />
+      <Content Remove="Business\**" />
+      <Content Remove="BinanceWebSocketTask.ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.Business\obj\BinanceWebSocketTask.Business.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.Business\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.Business\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.Data\obj\BinanceWebSocketTask.Data.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.Data\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.Data\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.ConsoleApp\appsettings.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.ConsoleApp\obj\BinanceWebSocketTask.ConsoleApp.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.ConsoleApp\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BinanceWebSocketTask.ConsoleApp\obj\project.packagespec.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BinanceWebSocketTask.Business\BinanceWebSocketTask.Business.csproj" />
+    </ItemGroup>
+
+</Project>
