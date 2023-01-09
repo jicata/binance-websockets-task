@@ -30,7 +30,7 @@ Once the application has started you will be able to interact with the console. 
 
 2. Run docker container (Not recommended due to https://github.com/dotnet/aspnetcore/issues/27675)
 
-Clone ther repository, navigate to the root folder and execute the following bash command **sh run_console_app.sh**. Once the command finishes executing, the Console App will start in non-detached mode. Follow the instructions on screen to interact with the application.
+Clone ther repository, navigate to the root folder and execute the following bash command **sh run_console_app.sh**. Once the command finishes executing, the Console App will start in non-detached mode. Follow the instructions on screen to interact with the application. Beware that sometimes the dockerized application may crash due to the following issue https://github.com/dotnet/aspnetcore/issues/27675
 
 
 ## Additional information
