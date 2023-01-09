@@ -12,9 +12,13 @@ public class ConsoleService : IHostedService
     private const string SimpleMovingAveragePriceCommamndBeginning = "sma";
 
     private readonly IMediator _mediator;
+    private readonly IHostApplicationLifetime _lifetime;
 
-    public ConsoleService(IMediator mediator) 
-        => _mediator = mediator;
+    public ConsoleService(IMediator mediator,IHostApplicationLifetime lifetime)
+    {
+        _mediator = mediator;
+        _lifetime = lifetime;
+    }
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
@@ -41,9 +45,9 @@ public class ConsoleService : IHostedService
         Console.WriteLine("Bye!");
     }
 
-    public Task StopAsync(CancellationToken cancellationToken)
+    public async Task StopAsync(CancellationToken cancellationToken)
     {
-        return Task.CompletedTask;
+        await Task.Run(() => _lifetime.StopApplication());
     }
     
     
