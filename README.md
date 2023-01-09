@@ -32,3 +32,7 @@ Once the application has started you will be able to interact with the console. 
 
 Clone ther repository, navigate to the root folder and execute the following bash command **sh run_console_app.sh**. Once the command finishes executing, the Console App will start in non-detached mode. Follow the instructions on screen to interact with the application.
 
+
+## Additional information
+
+By default the application will always drop the database on startup. This is intended to ensure clean slate on startup and no dirty noise in terms of data. To disable this behaviour simply go to binance-websockets-task\BinanceWebSocketTask.Data\Data\BinanceWebSocketTaskDbContext.cs and comment line 22 `await this.Database.EnsureDeletedAsync();`
